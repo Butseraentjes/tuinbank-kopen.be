@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ontdek ons assortiment premium houten tuinbanken. Duurzaam, comfortabel en perfect voor uw tuin.">
+    <meta name="keywords" content="houten tuinbank, tuinmeubelen, tuinbank, buitenbank">
+    <title>Houten Tuinbanken | Tuinbank-kopen.be</title>
+    <style>
+        :root {
+            --primary: #2d5a27;
+            --secondary: #f5a623;
+            --accent: #e17055;
+            --background: #f9f9f9;
+            --text: #333333;
+            --gray-light: #f4f4f4;
+            --gray: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--background);
+        }
+
+        .header {
+            background-color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header__nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header__logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(45, 90, 39, 0.85), rgba(45, 90, 39, 0.85)), url('https://www.e-woodproducts.be/cdn/shop/files/henry-tb-1d1200_1200x1200.jpg?v=1706520039') center/cover;
+            backdrop-filter: blur(5px);
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+            padding: 2rem;
+        }
+
+        .hero__content {
+            max-width: 800px;
+        }
+
+        .hero__title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+        }
+
+        .hero__subtitle {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn--primary {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        .btn--primary:hover {
+            background-color: #e69516;
+        }
+
+        .section {
+            padding: 4rem 1rem;
+        }
+
+        .section__content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .products {
+            background-color: white;
+        }
+
+        .products__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+            text-decoration: none;
+            color: var(--text);
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .product-card__image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .product-card__content {
+            padding: 1.5rem;
+        }
+
+        .benefits {
+            background-color: var(--gray-light);
+        }
+
+        .benefits__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            margin-bottom: 2rem;
+            color: var(--primary);
+        }
+
+        .section-intro {
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .testimonials {
+            background-color: white;
+        }
+
+        .testimonial-card {
+            background: var(--gray-light);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .testimonial-card__author {
+            font-weight: bold;
+            margin-top: 1rem;
+            color: var(--primary);
+        }
+
+        .story {
+            background-color: var(--gray-light);
+        }
+
+        .story__content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .footer {
+            background-color: var(--primary);
+            color: white;
+            padding: 3rem 1rem;
+        }
+
+        .footer__content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer__info {
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 60vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+            <a href="https://www.e-woodproducts.be/" class="header__logo">Tuinbank-kopen.be</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero__content">
+            <h1 class="hero__title">Premium Houten Tuinbanken</h1>
+            <p class="hero__subtitle">Geniet van uw tuin met onze duurzame en stijlvolle tuinbanken</p>
+            <a href="https://www.e-woodproducts.be/collections/tuinbank" class="btn btn--primary">Bekijk ons assortiment</a>
+        </div>
+    </section>
+
+    <section class="section story">
+        <div class="section__content story__content">
+            <h2 class="section-title">Waarom een Houten Tuinbank?</h2>
+            <p>Een tuinbank is meer dan alleen een zitplaats - het is een plek waar herinneringen worden gemaakt. Waar u 's ochtends rustig van uw koffie geniet, waar kinderen hun verhalen delen na school, en waar vrienden samenkomen op warme zomeravonden.</p>
+            <br>
+            <p>Onze houten tuinbanken combineren tijdloze elegantie met modern comfort. Gemaakt van zorgvuldig geselecteerd FSC-gecertificeerd hout, bieden ze niet alleen een duurzame oplossing voor uw tuin, maar vormen ze ook een natuurlijke aanvulling op elk tuinontwerp.</p>
+        </div>
+    </section>
+
+    <section class="section products">
+        <div class="section__content">
+            <h2 class="section-title">Ontdek onze Collectie</h2>
+            <p class="section-intro">Van klassieke designs tot moderne interpretaties - voor elke tuin hebben wij de perfecte bank</p>
+            <div class="products__grid">
+                <a href="https://www.e-woodproducts.be/collections/tuinbank" class="product-card">
+                    <img src="https://www.e-woodproducts.be/cdn/shop/files/henry-tb-1d1200_1200x1200.jpg?v=1706520039" alt="Henry Tuinbank" class="product-card__image">
+                    <div class="product-card__content">
+                        <h3>Henry Tuinbank</h3>
+                        <p>Elegante bank met verfijnde details</p>
+                    </div>
+                </a>
+                <a href="https://www.e-woodproducts.be/collections/tuinbank" class="product-card">
+                    <img src="https://www.e-woodproducts.be/cdn/shop/files/charles-140-1_1200x1200.jpg?v=1717141879" alt="Charles Tuinbank" class="product-card__image">
+                    <div class="product-card__content">
+                        <h3>Charles 140</h3>
+                        <p>Royale zitbank voor optimaal comfort</p>
+                    </div>
+                </a>
+                <a href="https://www.e-woodproducts.be/collections/tuinbank" class="product-card">
+                    <img src="https://www.e-woodproducts.be/cdn/shop/files/bretagne120-1_1200x1200.jpg?v=1710490670" alt="Bretagne Tuinbank" class="product-card__image">
+                    <div class="product-card__content">
+                        <h3>Bretagne 120</h3>
+                        <p>Klassieke stijl met modern comfort</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section benefits">
+        <div class="section__content">
+            <h2 class="section-title">Voordelen van onze Tuinbanken</h2>
+            <div class="benefits__grid">
+                <div class="benefit-card">
+                    <h3>Duurzaam Materiaal</h3>
+                    <p>Onze tuinbanken zijn gemaakt van FSC-gecertificeerd hardhout, bekend om zijn duurzaamheid en weerbestendigheid. Dit garandeert jarenlang zorgeloos zitplezier in uw tuin.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Ergonomisch Design</h3>
+                    <p>Elke bank is ontworpen met oog voor comfort. De zithoogte, rughoek en zitdiepte zijn zorgvuldig afgestemd op optimaal zitcomfort voor lange momenten in de tuin.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Minimaal Onderhoud</h3>
+                    <p>Het gebruikte hardhout vraagt weinig onderhoud en is bestand tegen verschillende weersomstandigheden. Een jaarlijkse behandeling is voldoende om de bank in topconditie te houden.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section testimonials">
+        <div class="section__content">
+            <h2 class="section-title">Wat onze Klanten Zeggen</h2>
+            <div class="testimonials__grid">
+                <div class="testimonial-card">
+                    <p>"Al jaren zoeken we naar de perfecte tuinbank. Deze bank combineert precies wat we wilden: mooi design, stevig materiaal en heerlijk zitcomfort. Een echte aanrader!"</p>
+                    <p class="testimonial-card__author">- Familie Peeters uit Antwerpen</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"De bank staat nu een jaar in onze tuin en ziet er nog steeds als nieuw uit. Het hout heeft een prachtige natuurlijke patina gekregen en het comfort is nog steeds optimaal."</p>
+                    <p class="testimonial-card__author">- Marc & Lisa uit Gent</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section products">
+        <div class="section__content">
+            <h2 class="section-title">Meer Inspiratie</h2>
+            <div class="products__grid">
+                <a href="https://www.e-woodproducts.be/collections/tuinbank" class="product-card">
+                    <img src="https://www.e-woodproducts.be/cdn/shop/files/lattenbank-2_1104x1104.jpg?v=1709543706" alt="Moderne Lattenbank" class="product-card__image">
+                    <div class="product-card__content">
+                        <h3>Moderne Lattenbank</h3>
+                        <p>Strak design voor de moderne tuin</p>
+                    </div>
+                </a>
+                <a href="https://www.e-woodproducts.be/collections/tuinbank" class="product-card">
+                    <img src="https://www.e-woodproducts.be/cdn/shop/files/tb-george-3_1200x1200.jpg?v=1706530106" alt="George Tuinbank" class="product-card__image">
+                    <div class="product-card__content">
+                        <h3>George Tuinbank</h3>
+                        <p>Tijdloos design met extra comfort</p>
+                    </div>
+                </a>
+                <a href="https://www.e-woodproducts.be/collections/tuinbank" class="product-card">
+                    <img src="https://www.e-woodproducts.be/cdn/shop/files/dordogne-achterzicht_a8ab090f-1640-48bd-a0cb-0270
